@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض فني ومالي لتطوير المبيعات وتعزيز الحضور الرقمي | كي أوديت K Audit × KAAF Group</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Cairo & IBM Plex Sans Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kaaf: {
+                            blue: '#0A4C86',
+                            blueLight: '#1C75C8',
+                            blueDeep: '#05233E',
+                            blueDarkest: '#031424',
+                            green: '#00875A',
+                            greenLight: '#00B377',
+                            greenDeep: '#023824',
+                            gold: '#D4AF37',
+                            goldLight: '#F5DE88',
+                            purple: '#7C3AED',
+                            purpleLight: '#A78BFA',
+                            rose: '#E11D48',
+                            roseLight: '#FB7185',
+                            cyan: '#06B6D4',
+                            cyanLight: '#67E8F9',
+                            amber: '#F59E0B',
+                            dark: '#030812',
+                            darkSlate: '#081220',
+                            cardBg: '#0B1A2E',
+                            border: '#1B314B'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        ibm: ['IBM Plex Sans Arabic', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'glow-blue': '0 0 35px -5px rgba(10, 76, 134, 0.6)',
+                        'glow-cyan': '0 0 35px -5px rgba(6, 182, 212, 0.6)',
+                        'glow-gold': '0 0 35px -5px rgba(212, 175, 55, 0.55)',
+                        'glow-green': '0 0 35px -5px rgba(0, 135, 90, 0.6)',
+                        'glow-purple': '0 0 35px -5px rgba(124, 58, 237, 0.6)',
+                        'web-card': '0 20px 45px -15px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #030812;
+            color: #E2E8F0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #interactive-bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+
+        .kaaf-ribbon {
+            background: linear-gradient(90deg, 
+                #0A4C86 0%, 
+                #06B6D4 20%, 
+                #00875A 40%, 
+                #D4AF37 60%, 
+                #7C3AED 80%, 
+                #E11D48 100%
+            );
+            height: 4px;
+        }
+
+        .web-card-blue {
+            background: linear-gradient(135deg, rgba(10, 30, 56, 0.85) 0%, rgba(5, 16, 32, 0.95) 100%);
+            border: 1px solid rgba(28, 117, 200, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-blue:hover {
+            border-color: rgba(28, 117, 200, 0.75);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px -10px rgba(10, 76, 134, 0.5);
+        }
+
+        .web-card-cyan {
+            background: linear-gradient(135deg, rgba(8, 36, 48, 0.85) 0%, rgba(4, 18, 26, 0.95) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-cyan:hover {
+            border-color: rgba(6, 182, 212, 0.75);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px -10px rgba(6, 182, 212, 0.5);
+        }
+
+        .web-card-gold {
+            background: linear-gradient(135deg, rgba(45, 36, 15, 0.85) 0%, rgba(18, 14, 5, 0.95) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-gold:hover {
+            border-color: rgba(212, 175, 55, 0.85);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px -10px rgba(212, 175, 55, 0.5);
+        }
+
+        .web-card-green {
+            background: linear-gradient(135deg, rgba(8, 38, 28, 0.85) 0%, rgba(4, 20, 15, 0.95) 100%);
+            border: 1px solid rgba(0, 179, 119, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-green:hover {
+            border-color: rgba(0, 179, 119, 0.75);
+            box-shadow: 0 16px 35px -10px rgba(0, 135, 90, 0.5);
+        }
+
+        .web-card-purple {
+            background: linear-gradient(135deg, rgba(30, 18, 54, 0.85) 0%, rgba(14, 8, 28, 0.95) 100%);
+            border: 1px solid rgba(167, 139, 250, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-purple:hover {
+            border-color: rgba(167, 139, 250, 0.75);
+            box-shadow: 0 16px 35px -10px rgba(124, 58, 237, 0.5);
+        }
+
+        @keyframes float-brand {
+            0%, 100% { transform: translateY(0px); box-shadow: 0 10px 25px -5px rgba(10, 76, 134, 0.6); }
+            50% { transform: translateY(-7px); box-shadow: 0 18px 30px -5px rgba(10, 76, 134, 0.8); }
+        }
+        @keyframes float-wa {
+            0%, 100% { transform: translateY(0px) scale(1); box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5); }
+            50% { transform: translateY(-7px) scale(1.03); box-shadow: 0 18px 30px -5px rgba(37, 211, 102, 0.8); }
+        }
+
+        .anim-float-brand { animation: float-brand 4s ease-in-out infinite; }
+        .anim-float-wa { animation: float-wa 4s ease-in-out infinite 0.5s; }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.2s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #06B6D4;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        @media print {
+            body { background-color: #fff !important; color: #111 !important; }
+            #interactive-bg-canvas, aside, header, #floating-kaaf-btn, #floating-wa-btn { display: none !important; }
+            .web-card-blue, .web-card-gold, .web-card-green, .web-card-purple, .web-card-cyan {
+                background: #f8fafc !important;
+                border: 1px solid #cbd5e1 !important;
+                color: #0f172a !important;
+                box-shadow: none !important;
+            }
+            .text-white { color: #0f172a !important; }
+            .text-gray-200, .text-gray-300, .text-gray-400 { color: #334155 !important; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-kaaf-blue selection:text-white">
+
+    <!-- Interactive Ambient Canvas Layer -->
+    <canvas id="interactive-bg-canvas"></canvas>
+
+    <!-- Floating Brand Logo (Bottom Left) -->
+    <aside id="floating-kaaf-btn" class="fixed bottom-6 left-6 z-50">
+        <a href="https://kaafmarketing.sa/" target="_blank" rel="noopener noreferrer" title="مجموعة كاف | KAAF Group" class="block w-14 h-14 rounded-full overflow-hidden border-2 border-kaaf-cyanLight/80 p-0.5 bg-black/90 anim-float-brand transition-all hover:scale-110 group backdrop-blur-md">
+            <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-full" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+        </a>
+    </aside>
+
+    <!-- Floating WhatsApp CTA (Bottom Right) -->
+    <aside id="floating-wa-btn" class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/966537553910" target="_blank" rel="noopener noreferrer" title="التواصل المباشر مع مستشار تطوير الأعمال (+966 53 755 3910)" class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-emerald-200/80 anim-float-wa transition-all hover:scale-110 shadow-lg">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </a>
+    </aside>
+
+    <!-- Document Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-kaaf-dark/90 backdrop-blur-xl border-b border-kaaf-border/70 px-4 lg:px-12 py-3.5 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-2xl overflow-hidden border border-kaaf-blueLight/50 p-0.5 bg-black shrink-0 shadow-glow-blue">
+                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-base font-black text-white tracking-wide font-ibm">KAAF Group</span>
+                        <span class="px-2 py-0.5 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight text-[10px] font-extrabold border border-kaaf-gold/40">عرض خاص: كي أوديت K Audit</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400 font-medium">فريق مبيعات خارجي • SEO & GEO • منظومة نمو متكاملة</p>
+                </div>
+            </div>
+
+            <!-- Anchor Links -->
+            <nav class="hidden lg:flex items-center gap-5 text-xs font-bold text-gray-300">
+                <a href="#intro" class="nav-link hover:text-white">الفرصة والتحدي</a>
+                <a href="#sales-service" class="nav-link hover:text-white">فريق المبيعات (6 أشهر)</a>
+                <a href="#security" class="nav-link hover:text-white">السرية والأمان المالي</a>
+                <a href="#seo-geo-service" class="nav-link hover:text-white">SEO & GEO (3 أشهر)</a>
+                <a href="#vision2030" class="nav-link hover:text-white">رؤية 2030 والتحول</a>
+                <a href="#synergy" class="nav-link hover:text-white">تكامل المنظومة</a>
+                <a href="#pricing" class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-kaaf-gold to-kaaf-amber text-slate-950 font-black hover:brightness-110 shadow-sm transition">الملخص المالي (27,500 SAR)</a>
+            </nav>
+
+            <div class="flex items-center gap-2">
+                <a href="https://wa.me/966537553910" target="_blank" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 transition">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>تواصل معنا</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Document Content Container -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+
+        <!-- ========================================================================= -->
+        <!-- 00 — PROPOSAL HERO BANNER / COVER                                         -->
+        <!-- ========================================================================= -->
+        <section class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 lg:p-16 bg-gradient-to-br from-kaaf-blueDeep/95 via-kaaf-darkSlate/95 to-kaaf-dark/95 border border-kaaf-blue/50 shadow-web-card text-white backdrop-blur-lg">
+            <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-kaaf-blue/30 border border-kaaf-blueLight/40 text-kaaf-cyanLight text-xs font-bold font-ibm">
+                        <i class="fa-solid fa-file-contract text-kaaf-cyan"></i>
+                        <span>وثيقة العرض الفني والمالي المتكامل • Business Proposal</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <span class="text-xs sm:text-sm font-bold text-gray-400 block tracking-wider uppercase font-ibm">Comprehensive Growth Architecture</span>
+                        <h1 class="text-3xl sm:text-5xl font-black text-white leading-tight tracking-tight">
+                            عرض فني ومالي لتطوير المبيعات وتعزيز الحضور الرقمي <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-l from-kaaf-goldLight via-yellow-200 to-kaaf-gold font-ibm">
+                                الموجه إلى: مؤسسة كي أوديت K Audit
+                            </span>
+                        </h1>
+                        <p class="text-sm sm:text-base font-bold text-sky-100/90 font-cairo leading-relaxed max-w-3xl border-r-4 border-kaaf-cyan pr-4 py-1 bg-kaaf-blueDeep/40 rounded-l-2xl">
+                            «نؤمن أن نمو المؤسسات لا يعتمد فقط على جودة خدماتها، بل على قدرتها على الوصول إلى العملاء المناسبين، وتحويل الفرص إلى تعاقدات، وبناء حضور رقمي يعزز الثقة ويزيد من فرص الوصول إليها».
+                        </p>
+                    </div>
+
+                    <!-- Meta Tags -->
+                    <div class="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                        <div class="p-3 rounded-2xl bg-black/60 border border-white/10">
+                            <span class="text-gray-400 block text-[11px]">مقدم العرض</span>
+                            <span class="font-black text-white font-ibm">KAAF Group</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-kaaf-gold/40">
+                            <span class="text-gray-400 block text-[11px]">الجهة المستهدفة</span>
+                            <span class="font-black text-kaaf-goldLight font-ibm">كي أوديت K Audit</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-white/10">
+                            <span class="text-gray-400 block text-[11px]">الاستثمار الإجمالي</span>
+                            <span class="font-black text-kaaf-cyanLight font-ibm">27,500 SAR</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-white/10">
+                            <span class="text-gray-400 block text-[11px]">نطاق الحل</span>
+                            <span class="font-black text-kaaf-greenLight">مبيعات + SEO + GEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dual Brand Presentation Box -->
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="w-full space-y-4 p-6 rounded-3xl bg-kaaf-cardBg/90 border border-kaaf-gold/40 shadow-2xl backdrop-blur-md">
+                        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                            <span class="text-xs font-black text-white flex items-center gap-2">
+                                <i class="fa-solid fa-handshake text-kaaf-gold"></i>
+                                <span>شراكة النمو والتوسع المؤسسي</span>
+                            </span>
+                            <span class="text-[10px] text-kaaf-gold font-mono font-bold">PROPOSAL</span>
+                        </div>
+
+                        <!-- Brand Logos Container -->
+                        <div class="p-4 rounded-2xl bg-black/70 border border-white/10 flex items-center justify-around gap-3">
+                            <div class="text-center space-y-1">
+                                <div class="w-14 h-14 rounded-2xl overflow-hidden border border-kaaf-blueLight/50 p-0.5 bg-black mx-auto shadow-md">
+                                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+                                </div>
+                                <span class="text-[10px] font-bold text-gray-400 block">KAAF Group</span>
+                            </div>
+                            <div class="text-kaaf-gold text-lg font-mono font-bold">✕</div>
+                            <div class="text-center space-y-1">
+                                <div class="w-14 h-14 rounded-2xl overflow-hidden border border-kaaf-gold/50 p-1 bg-white/95 mx-auto shadow-md flex items-center justify-center">
+                                    <img src="https://i.ibb.co/cKPSPGps/logo.png" alt="كي أوديت K Audit" class="w-full h-full object-contain" onerror="this.parentElement.innerHTML='<div class=\'text-[10px] font-black text-slate-900\'>K Audit</div>'">
+                                </div>
+                                <span class="text-[10px] font-bold text-kaaf-goldLight block">K Audit</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 text-xs text-gray-300">
+                            <div class="p-2.5 rounded-xl bg-kaaf-blue/20 border border-kaaf-blue/30 space-y-0.5">
+                                <span class="font-bold text-white flex items-center gap-1.5">
+                                    <i class="fa-solid fa-users-gear text-kaaf-cyanLight"></i>
+                                    المسار الأول: فريق مبيعات خارجي
+                                </span>
+                                <p class="text-[11px] text-gray-300">6 أشهر تشغيلية • 21,000 ريال (بحث، تواصل، تأهيل، ومتابعة).</p>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-kaaf-purple/20 border border-kaaf-purple/40 space-y-0.5">
+                                <span class="font-bold text-kaaf-purpleLight flex items-center gap-1.5">
+                                    <i class="fa-solid fa-brain text-kaaf-purpleLight"></i>
+                                    المسار الثاني: SEO & GEO للبحث الذكي
+                                </span>
+                                <p class="text-[11px] text-gray-300">3 أشهر • 6,500 ريال (Google + ChatGPT + Gemini).</p>
+                            </div>
+                        </div>
+
+                        <a href="#pricing" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-kaaf-gold to-kaaf-amber text-slate-950 font-black text-xs text-center block hover:brightness-110 transition shadow-md">
+                            استعراض الملخص المالي الكامل (27,500 ريال)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 01 — INTRODUCTION: THE OPPORTUNITY & THE CHALLENGE                        -->
+        <!-- ========================================================================= -->
+        <section id="intro" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-blue/30 text-kaaf-cyanLight font-black text-xs border border-kaaf-blue/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compass text-[11px]"></i>
+                    <span>أولاً</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-mountain-sun text-kaaf-cyanLight text-xl"></i>
+                    <span>مقدمة العرض — الفرصة والتحدي أمام مؤسسة كي أوديت</span>
+                </h2>
+            </div>
+
+            <div class="web-card-blue rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-blue/40 shadow-web-card">
+                <div class="flex items-center gap-3 pb-3 border-b border-kaaf-blue/40 text-kaaf-cyanLight font-bold text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-kaaf-blue/40 flex items-center justify-center text-kaaf-cyanLight">
+                        <i class="fa-solid fa-chart-line text-base"></i>
+                    </div>
+                    <span>معادلة التوسع المتوازن في بيئة الأعمال السعودية الحديثة</span>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+                    في ظل الحراك الاقتصادي المتسارع والتطور التنظيمي الذي تشهده المملكة العربية السعودية، لم يعد كافياً للمؤسسات المهنية المتخصصة — مثل <strong>مؤسسة كي أوديت K Audit</strong> — الاعتماد فقط على السمعة التقليدية أو الانتظار السلبي لطلبات العملاء. إن المؤسسات التي تسعى إلى التوسع وترسيخ حصتها السوقية تحتاج اليوم إلى العمل على <strong>مسارين متكاملين ومتزامنين</strong>:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                    <!-- Commercial Track -->
+                    <div class="p-6 rounded-2xl bg-black/40 border border-kaaf-blue/40 space-y-3">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-sm">
+                            <i class="fa-solid fa-briefcase text-lg"></i>
+                            <h3 class="text-white font-black text-base">1. المسار التجاري (Outbound Sales Engine)</h3>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            المبادرة النشطة للوصول إلى العملاء والشركات المحتملة، وفتح قنوات حوار مهنية مع صناع القرار، وفهم احتياجاتهم بدقة، وتأهيل الفرص البيعية، ومتابعتها بمنهجية دورية صارمة حتى الوصول إلى مرحلة التفاوض والتعاقد.
+                        </p>
+                    </div>
+
+                    <!-- Digital Track -->
+                    <div class="p-6 rounded-2xl bg-black/40 border border-kaaf-purple/40 space-y-3">
+                        <div class="flex items-center gap-2 text-kaaf-purpleLight font-bold text-sm">
+                            <i class="fa-solid fa-globe text-lg"></i>
+                            <h3 class="text-white font-black text-base">2. المسار الرقمي (Inbound Search & AI Discovery)</h3>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            تعزيز ظهور المؤسسة على محركات البحث التقليدية (Google)، وتأهيل حضورها الرقمي ضمن أدوات الذكاء الاصطناعي ومحركات البحث التوليدي (ChatGPT, Gemini)، ليجدها العميل في اللحظة التي يبحث فيها عن خدمات المراجعة والتدقيق والاستشارات.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Strategic Synthesis Banner -->
+                <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/40 text-xs sm:text-sm text-slate-300 space-y-2">
+                    <div class="flex items-center gap-2 text-kaaf-gold font-bold">
+                        <i class="fa-solid fa-gem text-base"></i>
+                        <span>قوة الدمج في منظومة نمو موحدة:</span>
+                    </div>
+                    <p class="leading-relaxed">
+                        إن الجمع بين <strong>فريق مبيعات خارجي متخصص</strong> و<strong>حضور رقمي ذكي مبني على معايير SEO & GEO</strong> يساعد مؤسسة كي أوديت على بناء <strong>منظومة نمو متكاملة</strong>؛ بحيث لا تعتمد المؤسسة فقط على البحث المباشر عن العملاء وإجهاد طاقتها، ولا تترك في الوقت ذاته الفرص الرقمية الهائلة في السوق دون استثمار واقتناص.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 02 — SERVICE 1: OUTSOURCED SALES TEAM (6 MONTHS)                          -->
+        <!-- ========================================================================= -->
+        <section id="sales-service" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-gold/30 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-users-gear text-[11px]"></i>
+                    <span>الخدمة الأولى</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-headset text-kaaf-gold text-xl"></i>
+                    <span>فريق مبيعات خارجي مخصص لمدة 6 أشهر (Outsourced Sales Team)</span>
+                </h2>
+            </div>
+
+            <!-- Core Value & Slogan Card -->
+            <div class="relative overflow-hidden rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-kaaf-blueDeep via-kaaf-darkSlate to-kaaf-cardBg border-2 border-kaaf-gold shadow-glow-gold space-y-6">
+                <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-kaaf-gold/20 border border-kaaf-gold/40 text-kaaf-goldLight text-xs font-black">
+                            <i class="fa-solid fa-calendar-check text-kaaf-gold"></i>
+                            <span>مدة التعاقد: 6 أشهر تشغيلية مستمرة</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-black text-white font-ibm">
+                            الفكرة الأساسية: التفرغ للتشغيل ونقل أعباء المبيعات إلى KAAF
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-medium">
+                            قد تمتلك إدارة <strong>مؤسسة كي أوديت K Audit</strong> الخبرة الفنية العميقة والقدرة العالية على تقديم خدمات التدقيق والاستشارات، لكن إدارة عمليات البحث اليومي عن العملاء، والتواصل المستمر، وبناء قواعد البيانات، والمتابعة الهاتفية والرقمية تستهلك وقتاً وجهداً هائلين من قيادة المؤسسة.
+                        </p>
+                        <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-medium">
+                            هنا يأتي دور فريق المبيعات الخارجي من KAAF، ليتولى الجانب التشغيلي والتجاري الكامل من رحلة الوصول إلى العميل، ويخفف العبء اليومي عن إدارة المؤسسة، حتى تتمكن من التركيز على أعمالها الاستشارية الأساسية وإدارة عملياتها الفنية.
+                        </p>
+
+                        <!-- Highlighted Marketing Message -->
+                        <div class="p-4 rounded-2xl bg-black/75 border-2 border-kaaf-gold/60 text-kaaf-goldLight font-bold text-xs sm:text-sm leading-relaxed shadow-lg flex items-center gap-3">
+                            <i class="fa-solid fa-quote-right text-kaaf-gold text-xl shrink-0"></i>
+                            <span>«خلّ إدارة مؤسستك تركز على التشغيل وتقديم الخدمة، واترك لنا مهمة البحث عن الفرص التجارية والتواصل مع العملاء ومتابعتهم حتى مرحلة التعاقد».</span>
+                        </div>
+                    </div>
+
+                    <!-- Price Block for Sales Service -->
+                    <div class="lg:col-span-4 flex flex-col items-center justify-center">
+                        <div class="w-full max-w-sm bg-black/85 border-2 border-kaaf-gold rounded-3xl p-6 sm:p-8 text-center space-y-4 shadow-2xl">
+                            <span class="text-xs font-bold text-gray-400 block mb-1">إجمالي قيمة الباقة (6 أشهر)</span>
+                            <div class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-kaaf-goldLight via-yellow-200 to-kaaf-gold font-ibm tracking-tight">
+                                21,000 <span class="text-2xl text-kaaf-gold font-cairo">ريال</span>
+                            </div>
+                            <span class="inline-block px-3.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight text-xs font-black border border-kaaf-gold/40">
+                                فقط واحد وعشرون ألف ريال سعودي لا غير
+                            </span>
+                            <div class="pt-2 text-[11px] text-gray-400 space-y-1">
+                                <p class="text-emerald-400 font-bold">✓ تعاقد شامل لمدة 6 أشهر كاملة</p>
+                                <p>بمتوسط 3,500 ريال شهرياً للاستثمار التشغيلي</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scope of Work (7 Stages) -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-2 text-white font-black text-lg">
+                    <i class="fa-solid fa-bars-staggered text-kaaf-cyanLight"></i>
+                    <span>نطاق العمل وآلية التنفيذ التشغيلية لفريق المبيعات (7 مراحل تفصيلية)</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Stage 1 -->
+                    <div class="web-card-blue p-5 rounded-2xl space-y-3 border-t-2 border-t-kaaf-cyanLight">
+                        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                            <span class="text-xs font-mono font-bold text-kaaf-cyanLight px-2.5 py-0.5 rounded-full bg-kaaf-blue/40">المرحلة 01</span>
+                            <i class="fa-solid fa-magnifying-glass text-kaaf-cyanLight"></i>
+                        </div>
+                        <h4 class="text-sm font-black text-white">دراسة النشاط والخدمات</h4>
+                        <ul class="space-y-1.5 text-xs text-gray-300">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>التعرف على طبيعة خدمات مؤسسة كي أوديت K Audit.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>فهم الشرائح المستهدفة والعملاء الأنسب لخدمات المراجعة.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحديد المزايا التنافسية ونقاط القوة التي سيتم التركيز عليها.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Stage 2 -->
+                    <div class="web-card-blue p-5 rounded-2xl space-y-3 border-t-2 border-t-kaaf-cyanLight">
+                        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                            <span class="text-xs font-mono font-bold text-kaaf-cyanLight px-2.5 py-0.5 rounded-full bg-kaaf-blue/40">المرحلة 02</span>
+                            <i class="fa-solid fa-database text-kaaf-cyanLight"></i>
+                        </div>
+                        <h4 class="text-sm font-black text-white">بناء قاعدة بيانات العملاء</h4>
+                        <ul class="space-y-1.5 text-xs text-gray-300">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>البحث عن الشركات والمؤسسات المتناسبة مع الخدمات.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تجميع وتدقيق بيانات التواصل التجارية الرسمية المتاحة.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تصنيف العملاء طبقاً لحجم المنشأة والقطاع ومدى الملاءمة.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Stage 3 -->
+                    <div class="web-card-blue p-5 rounded-2xl space-y-3 border-t-2 border-t-kaaf-cyanLight">
+                        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                            <span class="text-xs font-mono font-bold text-kaaf-cyanLight px-2.5 py-0.5 rounded-full bg-kaaf-blue/40">المرحلة 03</span>
+                            <i class="fa-solid fa-user-tie text-kaaf-cyanLight"></i>
+                        </div>
+                        <h4 class="text-sm font-black text-white">الوصول إلى صناع القرار</h4>
+                        <ul class="space-y-1.5 text-xs text-gray-300">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>التواصل مع المسؤولين عن اتخاذ القرارات أو التأثير فيها.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>التعريف بالمؤسسة وخدماتها بطريقة مهنية واحترافية.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>توضيح القيمة التي تقدمها المؤسسة للعميل المحتمل.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Stage 4 -->
+                    <div class="web-card-blue p-5 rounded-2xl space-y-3 border-t-2 border-t-kaaf-cyanLight">
+                        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                            <span class="text-xs font-mono font-bold text-kaaf-cyanLight px-2.5 py-0.5 rounded-full bg-kaaf-blue/40">المرحلة 04</span>
+                            <i class="fa-solid fa-filter-circle-dollar text-kaaf-cyanLight"></i>
+                        </div>
+                        <h4 class="text-sm font-black text-white">تأهيل العملاء والفرص</h4>
+                        <ul class="space-y-1.5 text-xs text-gray-300">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>فهم احتياجات العميل المحتمل ونطاق التدقيق المطلوب.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحديد مستوى الجدية والميزانية التقديرية والجاهزية.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>نقل الفرص المؤهلة لإدارة المؤسسة لاستكمال المتطلبات.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Stage 5 -->
+                    <div class="web-card-blue p-5 rounded-2xl space-y-3 border-t-2 border-t-kaaf-cyanLight">
+                        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                            <span class="text-xs font-mono font-bold text-kaaf-cyanLight px-2.5 py-0.5 rounded-full bg-kaaf-blue/40">المرحلة 05</span>
+                            <i class="fa-solid fa-clock-rotate-left text-kaaf-cyanLight"></i>
+                        </div>
+                        <h4 class="text-sm font-black text-white">المتابعة وإدارة الفرص</h4>
+                        <ul class="space-y-1.5 text-xs text-gray-300">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>متابعة العملاء الذين أبدوا اهتماماً بتلقي العروض.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>التعامل مع الاستفسارات والاعتراضات الأولية وتذليلها.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحريك العميل في رحلة البيع وصولاً للتفاوض والتعاقد.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Stage 6 -->
+                    <div class="web-card-blue p-5 rounded-2xl space-y-3 border-t-2 border-t-kaaf-cyanLight">
+                        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                            <span class="text-xs font-mono font-bold text-kaaf-cyanLight px-2.5 py-0.5 rounded-full bg-kaaf-blue/40">المرحلة 06</span>
+                            <i class="fa-solid fa-handshake-simple text-kaaf-cyanLight"></i>
+                        </div>
+                        <h4 class="text-sm font-black text-white">التنسيق مع إدارة المؤسسة</h4>
+                        <ul class="space-y-1.5 text-xs text-gray-300">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>إحالة الفرص الجادة وتفاصيل العميل لفريق المؤسسة.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>ترتيب الاجتماعات التنسيقية الافتراضية أو الحضورية.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>متابعة حالة الفرص مع الإدارة حتى الوصول للنتيجة النهائية.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Stage 7 -->
+                    <div class="web-card-blue p-5 rounded-2xl space-y-3 border-t-2 border-t-kaaf-cyanLight md:col-span-2 lg:col-span-3">
+                        <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                            <span class="text-xs font-mono font-bold text-kaaf-cyanLight px-2.5 py-0.5 rounded-full bg-kaaf-blue/40">المرحلة 07</span>
+                            <i class="fa-solid fa-chart-pie text-kaaf-cyanLight"></i>
+                        </div>
+                        <h4 class="text-sm font-black text-white">إدارة الأداء والتقارير عبر نظام CRM</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-gray-300">
+                            <div class="p-2.5 rounded-xl bg-black/40 border border-white/10">
+                                <span class="font-bold text-white block mb-0.5">تنظيم الـ CRM</span>
+                                توثيق بيانات العملاء والفرص البيعية داخل مسار مبيعات منظم ومحدث يومياً.
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-black/40 border border-white/10">
+                                <span class="font-bold text-white block mb-0.5">متابعة المؤشرات</span>
+                                رصد دقيق لمراحل التواصل ونسب التحول والفرص قيد المتابعة.
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-black/40 border border-white/10">
+                                <span class="font-bold text-white block mb-0.5">تقارير دورية شفافة</span>
+                                تقديم تقارير دورية للإدارة توضح نشاط الفريق وحالة الفرص والتقدم المحقق.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Proposition Visual Grid -->
+            <div class="web-card-gold rounded-3xl p-6 sm:p-8 space-y-4 border-2 border-kaaf-gold/40">
+                <div class="flex items-center gap-2 text-kaaf-gold font-bold text-sm">
+                    <i class="fa-solid fa-trophy text-base"></i>
+                    <span>القيمة المضافة التي تقدمها الخدمة لمؤسسة كي أوديت K Audit</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-1">
+                        <span class="font-bold text-white block">تخفيف الضغط اليومي عن الإدارة</span>
+                        <p class="text-gray-300">إنهاء استنزاف وقت القيادة في الاتصالات الأولية والبحث المتكرر عن العملاء.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-1">
+                        <span class="font-bold text-white block">التفرغ لجودة الخدمات الاستشارية</span>
+                        <p class="text-gray-300">توجيه طاقة المؤسسة للتشغيل وتدقيق الحسابات وتقديم أعلى مستويات القيمة المهنية.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-1">
+                        <span class="font-bold text-white block">اختراق شرائح جديدة في السوق</span>
+                        <p class="text-gray-300">الوصول الممنهج إلى قطاعات وشركات تجارية جديدة لم تكن المؤسسة تصل إليها سابقاً.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-1">
+                        <span class="font-bold text-white block">منظومة مبيعات مؤسسية منضبطة</span>
+                        <p class="text-gray-300">بناء عملية بيع دورية قابلة للقياس والتطوير بدلاً من الاعتماد على التواصل العشوائي.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-1">
+                        <span class="font-bold text-white block">منع فقدان العملاء المحتملين</span>
+                        <p class="text-gray-300">بروتوكول متابعة مبرمج يضمن بقاء عروضكم حاضرة حتى حسم الاتفاق دون أي إهمال.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-1">
+                        <span class="font-bold text-white block">تهيئة العميل للإغلاق والتعاقد</span>
+                        <p class="text-gray-300">فريق يتولى المرحلة الأولى من رحلة العميل ويسلّمه للإدارة وهو جاهز تماماً لتوقيع العقد.</p>
+                    </div>
+                </div>
+
+                <!-- Governance Clause -->
+                <div class="p-4 rounded-2xl bg-black/70 border border-white/10 text-xs text-gray-300 leading-relaxed flex items-start gap-3">
+                    <i class="fa-solid fa-scale-balanced text-kaaf-gold text-base mt-0.5 shrink-0"></i>
+                    <div>
+                        <strong class="text-white block mb-0.5">حدود المسؤولية والصلاحيات التعاقدية:</strong>
+                        فريق المبيعات الخارجي التابع لـ KAAF مسؤول حصرياً عن البحث والتواصل والتأهيل والمتابعة وإدارة الفرص التجارية؛ أما <strong>اعتماد الأسعار النهائية، إصدار العروض الرسمية، تحديد الشروط التعاقدية، والتوقيع على العقود والارتباطات المالية، فيظل اختصاصاً أصيلاً وحصرياً لإدارة مؤسسة كي أوديت K Audit</strong>، ما لم يصدر تفويض رسمي مكتوب ومحدد بخلاف ذلك.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 03 — DATA CONFIDENTIALITY & FINANCIAL TRANSACTION INTEGRITY               -->
+        <!-- ========================================================================= -->
+        <section id="security" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-cyan/30 text-kaaf-cyanLight font-black text-xs border border-kaaf-cyan/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-shield-halved text-[11px]"></i>
+                    <span>محددات الأمان</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-lock text-kaaf-cyanLight text-xl"></i>
+                    <span>سرية بياناتكم وأمان تعاملاتكم أولوية أساسية</span>
+                </h2>
+            </div>
+
+            <div class="web-card-cyan rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-cyan/40 shadow-web-card">
+                <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-medium">
+                    انطلاقاً من الطبيعة المهنية الحساسة لخدمات المراجعة وتدقيق الحسابات والاستشارات المالية التي تقدمها مؤسسة كي أوديت، فإن <strong>KAAF Group</strong> تضع أمن وسرية المعلومات في أعلى سلم أولوياتها التشغيلية وفق الضوابط الصارمة التالية:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-2">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-file-shield text-base"></i>
+                            <span class="text-white text-sm">الالتزام التام بسرية البيانات</span>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            نراعي سرية بيانات المؤسسة وعملائها، ونلتزم باستخدام المعلومات التي يتم توفيرها للفريق حصرياً في حدود تنفيذ المهام البيعية المتفق عليها دون سواها.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-2">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-user-shield text-base"></i>
+                            <span class="text-white text-sm">حظر مشاركة البيانات</span>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            لا تتم مشاركة بيانات المؤسسة، أو سجلات العملاء، أو تفاصيل الفرص التجارية مع أي طرف ثالث غير مصرح له تحت أي ظرف من الظروف.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-2">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-network-wired text-base"></i>
+                            <span class="text-white text-sm">ضوابط الخصوصية المحكمة</span>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            يتم التعامل مع بيانات التواصل والفرص التجارية وفق ضوابط إدارية وتنظيمية تحفظ خصوصية المؤسسة وعملائها في كافة مراحل التواصل.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-2">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-ban text-kaaf-roseLight text-base"></i>
+                            <span class="text-white text-sm">عدم الحاجة للمعلومات الحساسة</span>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            لا يحتاج فريق المبيعات نهائياً إلى الاطلاع على الحسابات البنكية، أو كلمات المرور، أو بيانات البطاقات، أو أي معلومات دفع حساسة تخص كي أوديت أو عملاءها.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-2">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-building-columns text-base"></i>
+                            <span class="text-white text-sm">التحصيل عبر القنوات الرسمية</span>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            تتم كافة عمليات الدفع والتحصيل المالي من خلال الحسابات والقنوات الرسمية المعتمدة باسم مؤسسة كي أوديت K Audit دون أي وسيط.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-2">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-hand-holding-dollar text-base"></i>
+                            <span class="text-white text-sm">حظر استلام الأموال</span>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            لا يستلم فريق المبيعات أي مبالغ نقدية أو شيكات من العملاء، ولا ينفذ أي معاملات مالية نيابة عن المؤسسة إلا بموجب تفويض رسمي مكتوب وواضح.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 04 — SERVICE 2: SEO & GEO FOR 3 MONTHS                                    -->
+        <!-- ========================================================================= -->
+        <section id="seo-geo-service" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-purple/30 text-kaaf-purpleLight font-black text-xs border border-kaaf-purple/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-brain text-[11px]"></i>
+                    <span>الخدمة الثانية</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-magnifying-glass-chart text-kaaf-purpleLight text-xl"></i>
+                    <span>خدمات تحسين محركات البحث والذكاء الاصطناعي (SEO & GEO) لمدة 3 أشهر</span>
+                </h2>
+            </div>
+
+            <!-- Price & Strategic Why Box -->
+            <div class="relative overflow-hidden rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-kaaf-purple via-kaaf-darkSlate to-kaaf-cardBg border-2 border-kaaf-purpleLight shadow-glow-purple space-y-6">
+                <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-kaaf-purple/20 border border-kaaf-purple/40 text-kaaf-purpleLight text-xs font-black">
+                            <i class="fa-solid fa-calendar-check text-kaaf-purpleLight"></i>
+                            <span>مدة التعاقد: 3 أشهر من التهيئة والتحسين الرقمي</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-black text-white font-ibm">
+                            لماذا تحتاج مؤسسة كي أوديت إلى تقنيات SEO و GEO معاً؟
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-medium">
+                            إن سلوك العملاء وأصحاب الشركات في البحث عن مكاتب المراجعة، والمحاسبين القانونيين، والمستشارين الماليين يتطور بصورة جذرية؛ فلم يعد الاعتماد مقتصراً على البحث التقليدي عبر محرك Google، بل أصبح صناع القرار والمدراء الماليون يستعينون يومياً بأدوات الذكاء الاصطناعي التوليدي للحصول على المقارنات والترشيحات والاستفسارات المتخصصة.
+                        </p>
+                        <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-medium">
+                            بالتالي، فإن تعزيز الوجود الرقمي لمؤسسة كي أوديت في محركات البحث الكلاسيكية وأدوات البحث التوليدي أصبح فرصة حيوية لزيادة احتمالات اكتشافها، واقتناص العملاء الذين يبحثون بنية تعاقد حقيقية.
+                        </p>
+
+                        <!-- Slogan -->
+                        <div class="p-4 rounded-2xl bg-black/75 border-2 border-kaaf-purple/60 text-kaaf-purpleLight font-bold text-xs sm:text-sm leading-relaxed shadow-lg flex items-center gap-3">
+                            <i class="fa-solid fa-sparkles text-kaaf-purpleLight text-xl shrink-0"></i>
+                            <span>«نحن لا نعمل فقط على تحسين ظهور المؤسسة في نتائج البحث التقليدية، بل نعمل أيضاً على تهيئة حضورها الرقمي بما يتناسب مع التطور المتسارع في أساليب البحث المعتمدة على الذكاء الاصطناعي».</span>
+                        </div>
+                    </div>
+
+                    <!-- Price Block for SEO & GEO -->
+                    <div class="lg:col-span-4 flex flex-col items-center justify-center">
+                        <div class="w-full max-w-sm bg-black/85 border-2 border-kaaf-purpleLight rounded-3xl p-6 sm:p-8 text-center space-y-4 shadow-2xl">
+                            <span class="text-xs font-bold text-gray-400 block mb-1">إجمالي قيمة الباقة (3 أشهر)</span>
+                            <div class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-purple-100 to-indigo-300 font-ibm tracking-tight">
+                                6,500 <span class="text-2xl text-kaaf-purpleLight font-cairo">ريال</span>
+                            </div>
+                            <span class="inline-block px-3.5 py-1 rounded-full bg-kaaf-purple/20 text-kaaf-purpleLight text-xs font-black border border-kaaf-purple/40">
+                                فقط ستة آلاف وخمسمائة ريال سعودي لا غير
+                            </span>
+                            <div class="pt-2 text-[11px] text-gray-400 space-y-1">
+                                <p class="text-purple-300 font-bold">✓ تشمل تهيئة محركات البحث التقليدية والذكاء الاصطناعي</p>
+                                <p>بنية رقمية متطورة تخدم الظهور المستدام للمؤسسة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saudi Vision 2030 Connection Section -->
+            <div id="vision2030" class="web-card-green rounded-3xl p-6 sm:p-8 space-y-3 border-2 border-kaaf-green/40 shadow-glow-green">
+                <div class="flex items-center gap-2.5 text-kaaf-greenLight font-bold text-sm">
+                    <i class="fa-solid fa-flag text-base"></i>
+                    <h3 class="text-white font-black text-base">رؤية السعودية 2030 والتحول الرقمي — فرصة لتعزيز انتشار المؤسسات</h3>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-200 leading-relaxed">
+                    يُمثل التحول الرقمي، وتطوير البنية التقنية، ورفع كفاءة المنشآت والخدمات المهنية أحد أهم المرتكزات المحورية ضمن رؤية المملكة العربية السعودية 2030.
+                </p>
+                <div class="p-4 rounded-2xl bg-black/60 border border-emerald-500/30 text-xs sm:text-sm text-emerald-200 leading-relaxed font-medium">
+                    «مع تسارع التحول الرقمي داخل المملكة العربية السعودية، أصبح الوجود الرقمي القوي أحد العوامل المهمة لتعزيز تنافسية المؤسسات وتوسيع نطاق وصولها إلى العملاء. ومن هنا تأتي فرصة مؤسسة كي أوديت للاستفادة من محركات البحث وأدوات الذكاء الاصطناعي لبناء حضور رقمي أكثر قوة، والوصول إلى العملاء الذين يبحثون بالفعل عن الخدمات التي تقدمها».
+                </div>
+                <p class="text-[11px] text-gray-400">
+                    * ملاحظة توضيحية: يُطرح هذا التوجه كفرصة تجارية وتسويقية لمواكبة التوجه الاقتصادي العام في المملكة، دون الإيحاء بأن الخدمة برنامج حكومي رسمي أو تمنح اعتماداً حكومياً مستقلاً.
+                </p>
+            </div>
+
+            <!-- SEO vs GEO Visual Comparison -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                <!-- 1. SEO Traditional -->
+                <div class="web-card-blue p-6 sm:p-8 rounded-3xl space-y-4 border-t-4 border-t-kaaf-blueLight">
+                    <div class="flex items-center justify-between pb-3 border-b border-kaaf-blue/40">
+                        <div class="flex items-center gap-2">
+                            <span class="w-9 h-9 rounded-xl bg-kaaf-blue/40 text-kaaf-cyanLight flex items-center justify-center font-bold text-sm">SEO</span>
+                            <h3 class="text-base font-black text-white">أولاً: SEO — تحسين الظهور في محركات البحث التقليدية</h3>
+                        </div>
+                        <i class="fa-brands fa-google text-kaaf-cyanLight text-xl"></i>
+                    </div>
+
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        يهدف SEO إلى تحسين قابلية اكتشاف الموقع وظهوره في نتائج محركات البحث التقليدية مثل <strong>Google</strong>، عند بحث أصحاب الأعمال عن كلمات ومصطلحات ترتبط بنشاط كي أوديت.
+                    </p>
+
+                    <div class="space-y-2 text-xs text-gray-300 pt-2">
+                        <span class="font-bold text-white block">نطاق عمل الـ SEO (8 محاور رئيسية):</span>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحليل الوضع الحالي للموقع من الناحية الفنية والمحتوى ومستوى الأرشفة.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>دراسة الكلمات المفتاحية الأكثر طلباً المرتبطة بخدمات التدقيق والاستشارات.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحليل المنافسين الرقميين في السوق السعودي وتحديد فرص التفوق.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحسين عناوين الصفحات (Title Tags) والأوصاف (Meta Descriptions).</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تطوير المحتوى الداخلي بما يتناسب مع نية البحث للجمهور المستهدف.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>مراجعة الجوانب الفنية (سرعة التصفح، التوافق مع الجوال، معالجة الأخطاء).</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحسين وتنسيق الربط الداخلي بين صفحات الموقع لتسهيل التنقل والأرشفة.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>متابعة مؤشرات الظهور ونمو الزيارات وتقديم تقارير دورية قياسية.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="p-3 rounded-xl bg-kaaf-blue/20 border border-kaaf-blue/30 text-[11px] text-sky-200">
+                        <strong>وظيفة الـ SEO البصرية:</strong> مساعدة العملاء على اكتشاف مؤسسة كي أوديت مباشرة من خلال نتائج البحث التقليدية في Google.
+                    </div>
+                </div>
+
+                <!-- 2. GEO Generative Engine Optimization -->
+                <div class="web-card-purple p-6 sm:p-8 rounded-3xl space-y-4 border-t-4 border-t-kaaf-purpleLight">
+                    <div class="flex items-center justify-between pb-3 border-b border-kaaf-purple/40">
+                        <div class="flex items-center gap-2">
+                            <span class="w-9 h-9 rounded-xl bg-kaaf-purple/40 text-kaaf-purpleLight flex items-center justify-center font-bold text-sm">GEO</span>
+                            <h3 class="text-base font-black text-white">ثانياً: GEO — تحسين الظهور في محركات وأدوات البحث التوليدي</h3>
+                        </div>
+                        <i class="fa-solid fa-brain text-kaaf-purpleLight text-xl"></i>
+                    </div>
+
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        يركز GEO (Generative Engine Optimization) على تهيئة محتوى ومعلومات المؤسسة لتكون أكثر وضوحاً وتنظيماً وقابلية للفهم والاستشهاد بها بواسطة نماذج الذكاء الاصطناعي مثل <strong>ChatGPT, Google Gemini</strong> وأدوات البحث الذكي.
+                    </p>
+
+                    <div class="space-y-2 text-xs text-gray-300 pt-2">
+                        <span class="font-bold text-white block">نطاق عمل الـ GEO (7 محاور متطورة):</span>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-purpleLight mt-0.5"></i> <span>تحليل طبيعة ظهور المؤسسة ومعلوماتها الرقمية المتاحة في بيئات الذكاء الاصطناعي.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-purpleLight mt-0.5"></i> <span>دراسة الأسئلة والاستفسارات المعقدة التي يطرحها العملاء على الذكاء الاصطناعي.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-purpleLight mt-0.5"></i> <span>تحسين طريقة عرض المعلومات والخدمات الاستشارية لتكون إجابات نموذجية.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-purpleLight mt-0.5"></i> <span>تنظيم المحتوى والإجابات لتكون واضحة، مباشرة، ومبنية على مصادر موثوقة.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-purpleLight mt-0.5"></i> <span>تحسين هيكلة البيانات التعريفية (Schema & Structured Entities) الخاصة بكي أوديت.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-purpleLight mt-0.5"></i> <span>تعزيز اتساق وتطابق المعلومات الرقمية ومصادر التعريف بالمؤسسة عبر الإنترنت.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-purpleLight mt-0.5"></i> <span>متابعة فرص الظهور في بيئات البحث التوليدي وتقديم توصيات دورية للتحسين.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="p-3 rounded-xl bg-kaaf-purple/20 border border-kaaf-purple/30 text-[11px] text-purple-200">
+                        <strong>وظيفة الـ GEO البصرية:</strong> تحسين قابلية فهم محتوى المؤسسة والاستفادة منه في الإجابات والنتائج والمقارنات التي ينتجها الذكاء الاصطناعي.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Realistic Disclaimers for SEO/GEO -->
+            <div class="p-4 rounded-2xl bg-black/60 border border-white/10 text-xs text-gray-300 leading-relaxed flex items-start gap-3">
+                <i class="fa-solid fa-circle-info text-kaaf-purpleLight text-base mt-0.5 shrink-0"></i>
+                <p>
+                    <strong>إيضاح مهني بشأن خوارزميات البحث والذكاء الاصطناعي:</strong> تلتزم KAAF Group بتطبيق أحدث المعايير التقنية العالمية في تهيئة المحتوى والبنية البرمجية؛ وتأكيداً على النزاهة والشفافية، <strong>لا يقدم هذا العرض أي ضمانات بظهور المؤسسة حتمياً في النتيجة الأولى أو الحصول على ترشيح مؤكد قطعي من ChatGPT أو Gemini</strong>، حيث تخضع الترشيحات لخوارزميات ومنصات خارجية وتحديثات مستمرة لا يمكن لأي طرف التحكم فيها بالكامل.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 05 — INTEGRATION & SYNERGY: THE COMPLETE GROWTH ENGINE                    -->
+        <!-- ========================================================================= -->
+        <section id="synergy" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-green/30 text-kaaf-greenLight font-black text-xs border border-kaaf-green/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrows-spin text-[11px]"></i>
+                    <span>تكامل الخدمتين</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-cubes-stacked text-kaaf-greenLight text-xl"></i>
+                    <span>تكامل الخدمتين — بناء منظومة نمو متكاملة لمؤسسة كي أوديت</span>
+                </h2>
+            </div>
+
+            <div class="web-card-green rounded-3xl p-6 sm:p-10 space-y-8 border-2 border-kaaf-green/40 shadow-web-card">
+                <p class="text-sm sm:text-base text-gray-200 leading-relaxed font-medium">
+                    تتكامل الخدمتان لتشكلا دورة أعمال دائرية مستمرة تُغلق كافة الفجوات التسويقية والبيعية:
+                </p>
+
+                <!-- Visual Diagram Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+
+                    <!-- Box 1 -->
+                    <div class="p-6 rounded-2xl bg-kaaf-darkSlate/95 border-2 border-kaaf-purple/50 text-center space-y-3 shadow-lg">
+                        <div class="w-12 h-12 rounded-2xl bg-kaaf-purple/30 text-kaaf-purpleLight flex items-center justify-center mx-auto text-xl border border-kaaf-purple/50">
+                            <i class="fa-solid fa-radar"></i>
+                        </div>
+                        <h4 class="text-base font-black text-white font-ibm">SEO & GEO</h4>
+                        <div class="text-xs text-kaaf-purpleLight font-bold">زيادة فرص الاكتشاف الرقمي</div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            تعزيز فرص وصول العملاء إلى مؤسسة كي أوديت عند البحث عن خدمات المراجعة والتدقيق ذات الصلة عبر Google وأدوات الذكاء الاصطناعي.
+                        </p>
+                    </div>
+
+                    <!-- Center Operator -->
+                    <div class="text-center space-y-2">
+                        <div class="w-10 h-10 rounded-full bg-kaaf-gold/20 text-kaaf-gold border border-kaaf-gold/40 flex items-center justify-center mx-auto text-lg font-bold">
+                            +
+                        </div>
+                        <span class="text-xs font-mono font-bold text-gray-400 block tracking-wider uppercase">تكامل المسارات</span>
+                        <div class="hidden md:flex justify-center text-kaaf-cyanLight text-lg">
+                            <i class="fa-solid fa-arrows-left-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Box 2 -->
+                    <div class="p-6 rounded-2xl bg-kaaf-darkSlate/95 border-2 border-kaaf-cyan/50 text-center space-y-3 shadow-lg">
+                        <div class="w-12 h-12 rounded-2xl bg-kaaf-cyan/30 text-kaaf-cyanLight flex items-center justify-center mx-auto text-xl border border-kaaf-cyan/50">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h4 class="text-base font-black text-white font-ibm">فريق المبيعات الخارجي</h4>
+                        <div class="text-xs text-kaaf-cyanLight font-bold">إدارة الفرص وتحويلها لتعاقدات</div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            التواصل المباشر مع العملاء المستهدفين، فهم متطلباتهم، تأهيلهم مهنياً، ومتابعتهم بالتنسيق الكامل مع إدارة مؤسسة كي أوديت.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Final Target Result Card -->
+                <div class="p-6 rounded-2xl bg-black/75 border-2 border-kaaf-gold/60 text-center space-y-2 max-w-2xl mx-auto shadow-xl">
+                    <span class="text-xs font-mono font-bold text-kaaf-goldLight px-3 py-0.5 rounded-full bg-kaaf-gold/20 border border-kaaf-gold/40">النتيجة المستهدفة للمنظومة</span>
+                    <h4 class="text-lg font-black text-white">منظومة نمو مهنية شاملة تجمع بين الانتشار والإغلاق</h4>
+                    <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-medium">
+                        منظومة تجمع بين <strong>زيادة فرص الوصول إلى العملاء عبر القنوات الرقمية والذكية</strong>، و<strong>تنظيم عمليات التواصل والمتابعة التجارية على أرض الواقع</strong>، بما يدعم فرص النمو المستمر والتوسع التعاقدي لمؤسسة كي أوديت في السوق السعودي.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 06 — COMMERCIAL PROPOSAL & FINANCIAL SUMMARY                               -->
+        <!-- ========================================================================= -->
+        <section id="pricing" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-kaaf-gold/20 border border-kaaf-gold/50 text-kaaf-goldLight text-xs font-black">
+                    <i class="fa-solid fa-file-invoice-dollar text-kaaf-gold"></i>
+                    <span>سابعاً • الملخص المالي للعرض</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">هيكل الاستثمار والجدول المالي الشامل</h2>
+                <p class="text-xs sm:text-sm text-gray-300">تكلفة واضحة ومحددة بدون أي رسوم خفية أو تكاليف إضافية غير منصوص عليها</p>
+            </div>
+
+            <!-- Big Investment Summary Banner -->
+            <div class="relative overflow-hidden rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-kaaf-blueDeep via-kaaf-darkSlate to-kaaf-dark border-2 border-kaaf-gold shadow-glow-gold backdrop-blur-xl">
+                <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+                <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+                    <div class="space-y-4 text-center lg:text-right">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-kaaf-gold/20 border border-kaaf-gold/50 text-kaaf-goldLight text-xs font-black">
+                            <i class="fa-solid fa-gem text-kaaf-gold"></i>
+                            <span>العرض المشترك المتكامل لمؤسسة كي أوديت K Audit</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-black text-white font-ibm">
+                            استثمار متوازن يغطي المبيعات والانتشار الذكي
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-200 max-w-xl leading-relaxed font-medium">
+                            يشمل هذا الاستثمار الإجمالي: تشغيل فريق مبيعات خارجي مخصص لمدة <strong>6 أشهر كاملة</strong> بجميع مراحله التشغيلية وتقاريره عبر الـ CRM، بالتوازي مع تنفيذ خدمات <strong>SEO & GEO لمدة 3 أشهر</strong> لتهيئة الموقع لمحركات البحث التقليدية والذكاء الاصطناعي.
+                        </p>
+                    </div>
+
+                    <!-- Highlighted Total Amount Box -->
+                    <div class="shrink-0 text-center bg-black/85 border-2 border-kaaf-gold rounded-3xl p-6 sm:p-8 shadow-2xl min-w-[300px]">
+                        <span class="text-xs font-bold text-gray-400 block mb-1">إجمالي الاستثمار الكامل</span>
+                        <div class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-kaaf-goldLight via-yellow-200 to-kaaf-gold font-ibm tracking-tight">
+                            27,500 <span class="text-2xl sm:text-3xl text-kaaf-gold font-cairo">SAR</span>
+                        </div>
+                        <span class="inline-block mt-2 px-3.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight text-xs font-black border border-kaaf-gold/40">
+                            فقط سبعة وعشرون ألفاً وخمسمائة ريال سعودي لا غير
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Breakdown Table -->
+            <div class="overflow-x-auto rounded-3xl border-2 border-kaaf-border shadow-web-card bg-kaaf-darkSlate/90 backdrop-blur-md">
+                <table class="w-full text-right text-xs sm:text-sm">
+                    <thead class="bg-kaaf-cardBg text-gray-200 border-b border-kaaf-border font-bold">
+                        <tr>
+                            <th class="p-4 w-12 text-center">#</th>
+                            <th class="p-4 w-1/3">الخدمة المشمولة</th>
+                            <th class="p-4 text-center">مدة التنفيذ</th>
+                            <th class="p-4 text-center">إجمالي السعر</th>
+                            <th class="p-4">القيمة التشغيلية والأثر على المؤسسة</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-kaaf-border/60 text-gray-300">
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-cyanLight">01</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-users-gear text-kaaf-cyanLight"></i>
+                                <span>فريق مبيعات خارجي مخصص</span>
+                            </td>
+                            <td class="p-4 text-center font-bold text-kaaf-cyanLight">6 أشهر كاملة</td>
+                            <td class="p-4 text-center font-bold text-white font-ibm">
+                                <span class="px-3 py-1 rounded-xl bg-kaaf-blue/40 border border-kaaf-blue/60 text-kaaf-cyanLight">21,000 ريال سعودي</span>
+                            </td>
+                            <td class="p-4 text-gray-400">تفريغ الإدارة للتشغيل وتولي البحث والتواصل والتأهيل والمتابعة عبر CRM.</td>
+                        </tr>
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-purpleLight">02</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-brain text-kaaf-purpleLight"></i>
+                                <span>خدمات SEO & GEO المتقدمة</span>
+                            </td>
+                            <td class="p-4 text-center font-bold text-kaaf-purpleLight">3 أشهر متتالية</td>
+                            <td class="p-4 text-center font-bold text-white font-ibm">
+                                <span class="px-3 py-1 rounded-xl bg-kaaf-purple/40 border border-kaaf-purple/60 text-kaaf-purpleLight">6,500 ريال سعودي</span>
+                            </td>
+                            <td class="p-4 text-gray-400">تحسين الظهور في محركات البحث التقليدية (Google) ومحركات الذكاء الاصطناعي (ChatGPT, Gemini).</td>
+                        </tr>
+                        <tr class="hover:bg-kaaf-cardBg/60 transition bg-kaaf-gold/10 font-bold">
+                            <td class="p-4 text-center font-mono text-kaaf-gold text-base">Σ</td>
+                            <td class="p-4 text-kaaf-goldLight font-black text-base" colspan="2">
+                                الإجمالي الكلي للاستثمار
+                            </td>
+                            <td class="p-4 text-center font-black font-ibm text-base text-kaaf-goldLight">
+                                <span class="px-3.5 py-1.5 rounded-xl bg-kaaf-gold/25 border border-kaaf-gold/50">27,500 ريال سعودي</span>
+                            </td>
+                            <td class="p-4 text-kaaf-goldLight">
+                                استثمار إجمالي شامل لكافة الخدمات المذكورة لمدة تعاقدها دون أي تكاليف تشغيلية إضافية.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Financial Rules Note -->
+            <div class="p-4 rounded-2xl bg-kaaf-darkSlate/90 border border-kaaf-border text-xs text-slate-300 flex items-center gap-3">
+                <i class="fa-solid fa-circle-info text-kaaf-cyanLight text-base shrink-0"></i>
+                <span>الأسعار الموضحة تمثل التكلفة الإجمالية الصافية للباقات التعاقدية المحددة، دون إضافة أي رسوم أو تكاليف تشغيلية غير منصوص عليها في هذا العرض.</span>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 07 — CONCLUSION & CALL TO PARTNERSHIP                                      -->
+        <!-- ========================================================================= -->
+        <section id="conclusion" class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 bg-gradient-to-br from-kaaf-blueDeep via-kaaf-darkSlate to-kaaf-dark border border-kaaf-blueLight/40 text-center space-y-8 shadow-web-card">
+            <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-kaaf-gold shadow-glow-gold mx-auto p-0.5 bg-black">
+                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+                </div>
+
+                <span class="text-xs font-bold text-kaaf-cyanLight font-mono uppercase tracking-widest block">KAAF Group × K Audit • Strategic Growth</span>
+
+                <h3 class="text-2xl sm:text-4xl font-black text-white leading-tight">
+                    خاتمة العرض والدعوة إلى بدء التعاون
+                </h3>
+
+                <p class="text-sm sm:text-base text-gray-200 leading-relaxed font-medium">
+                    «نطمح في <strong>KAAF</strong> إلى أن نكون شريكاً في رحلة نمو <strong>مؤسسة كي أوديت K Audit</strong>، من خلال دعم جهود الوصول إلى العملاء وإدارة الفرص التجارية، بالتوازي مع تعزيز الحضور الرقمي والاستفادة من التطور المتسارع في عالم البحث والذكاء الاصطناعي.
+                </p>
+                <p class="text-sm sm:text-base text-gray-200 leading-relaxed font-medium">
+                    هدفنا أن نساعدكم على توجيه وقت الإدارة نحو تطوير الأعمال وجودة الخدمات الاستشارية، بينما نعمل على دعم مسارات الوصول إلى العملاء وتعزيز فرص الانتشار الرقمي».
+                </p>
+
+                <div class="pt-2 text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-kaaf-goldLight via-yellow-200 to-kaaf-gold font-ibm">
+                    KAAF Group – شريككم في بناء فرص النمو والتوسع.
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/966537553910" target="_blank" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-kaaf-gold to-kaaf-amber text-slate-950 font-black text-xs shadow-xl flex items-center gap-2 hover:brightness-110 transition">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>مناقشة بدء العمل وتأكيد اعتماد العرض الفني والمالي</span>
+                </a>
+                <a href="https://kaafmarketing.sa/" target="_blank" class="px-6 py-3.5 rounded-2xl bg-kaaf-dark border border-kaaf-border text-white font-bold text-xs hover:border-kaaf-cyan transition flex items-center gap-2">
+                    <i class="fa-solid fa-globe text-kaaf-cyanLight"></i>
+                    <span>الموقع الرسمي: kaafmarketing.sa</span>
+                </a>
+            </div>
+
+            <!-- Formal Document Signatures Box -->
+            <div class="pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-6 text-right text-xs text-gray-400">
+                <div class="space-y-1">
+                    <span class="text-white font-bold block text-sm">مقدم العرض:</span>
+                    <p class="text-gray-300 font-bold">KAAF Group for Marketing, Software & Media Solutions</p>
+                    <p>مجموعة كاف لحلول التسويق والبرمجيات والحلول الإعلامية</p>
+                    <p class="font-mono text-gray-500">المملكة العربية السعودية • الرياض</p>
+                </div>
+                <div class="space-y-1 md:text-left">
+                    <span class="text-white font-bold block text-sm">الموجه إليه العرض:</span>
+                    <p class="text-gray-300 font-bold">مؤسسة كي أوديت K Audit</p>
+                    <p>الاسم والصفة: ................................................................</p>
+                    <p>التوقيع والختم: ................................................</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Ambient Canvas Script -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('interactive-bg-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+            const particleCount = 40;
+            const colors = ['#0A4C86', '#06B6D4', '#00875A', '#7C3AED', '#D4AF37'];
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resize);
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.7;
+                    this.vy = (Math.random() - 0.5) * 0.7;
+                    this.radius = Math.random() * 2 + 1;
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                    this.alpha = Math.random() * 0.35 + 0.2;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    if (this.x < 0 || this.x > width) this.vx *= -1;
+                    if (this.y < 0 || this.y > height) this.vy *= -1;
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.globalAlpha = this.alpha;
+                    ctx.fill();
+                }
+            }
+
+            function init() {
+                resize();
+                particles = [];
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function connect() {
+                const maxDist = 130;
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a + 1; b < particles.length; b++) {
+                        let dx = particles[a].x - particles[b].x;
+                        let dy = particles[a].y - particles[b].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < maxDist) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y);
+                            ctx.strokeStyle = '#06B6D4';
+                            ctx.globalAlpha = (1 - (dist / maxDist)) * 0.2;
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.globalAlpha = 1;
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+                connect();
+                requestAnimationFrame(animate);
+            }
+
+            window.onload = function() {
+                init();
+                animate();
+            };
+        })();
+    </script>
+</body>
+</html>
